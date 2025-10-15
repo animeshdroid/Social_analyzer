@@ -1,6 +1,6 @@
-# Social Analyzer Pro
+# Social Analyzer
 
-Social Analyzer Pro is a tool that helps you understand what people are saying on social media. It can analyze posts from X (formerly Twitter) and Reddit, figure out the overall sentiment (positive, negative, or neutral), and detect emotions like joy, anger, sadness, fear, or surprise. The best part? It turns all that data into easy-to-read charts and reports so you can quickly see trends and insights.
+Social Analyzer is a tool that helps you understand what people are saying on social media. It can analyze posts from X (formerly Twitter) and Reddit, figure out the overall sentiment (positive, negative, or neutral), and detect emotions like joy, anger, sadness, fear, or surprise. The best part? It turns all that data into easy-to-read charts and reports so you can quickly see trends and insights.
 
 ---
 
