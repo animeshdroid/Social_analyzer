@@ -1,108 +1,23 @@
-# 🧠 Social Analyzer
+# Social Analyzer Pro
 
-![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
-![Streamlit](https://img.shields.io/badge/Framework-Streamlit-ff4b4b)
-![HuggingFace](https://img.shields.io/badge/NLP-HuggingFace-yellow)
-![Docker](https://img.shields.io/badge/Containerized-Docker-blue)
-![License](https://img.shields.io/badge/License-MIT-green)
-
-**Social Analyzer Pro** is an AI-powered sentiment and emotion analysis system that extracts and interprets posts from **X (Twitter)** and **Reddit**.  
-It transforms raw social media data into meaningful emotional insights — complete with interactive charts, emoji-based analysis, and detailed visualizations.
+Social Analyzer Pro is a tool that helps you understand what people are saying on social media. It can analyze posts from X (formerly Twitter) and Reddit, figure out the overall sentiment (positive, negative, or neutral), and detect emotions like joy, anger, sadness, fear, or surprise. The best part? It turns all that data into easy-to-read charts and reports so you can quickly see trends and insights.
 
 ---
 
-## 🚀 Features
+## What It Does
 
-✅ **Multi-Platform Analysis**
-- Analyze tweets and Reddit posts automatically.  
-- Extract metadata like likes, retweets, upvotes, and comments.
-
-🧠 **Sentiment + Emotion Detection**
-- Uses state-of-the-art transformer models:
-  - `cardiffnlp/twitter-roberta-base-sentiment-latest`
-  - `j-hartmann/emotion-english-distilroberta-base`
-- Detects emotions: Joy 😊, Sadness 😢, Anger 😠, Fear 😨, Surprise 😲, Disgust 🤢, Neutral 😐
-
-📊 **Interactive Visualization**
-- Sentiment confidence gauges  
-- Emotion radar charts  
-- Comment sentiment timelines  
-- Engagement metric bars  
-
-💬 **Advanced Comment Analysis**
-- Clusters comments into themes  
-- Detects controversial discussions  
-- Tracks sentiment shifts over time  
-
-⚙️ **Fully Containerized**
-- Docker-ready for consistent local or cloud deployment.  
-- Includes health checks and model caching for faster inference.
+- Pulls posts and comments from X and Reddit.
+- Cleans and processes the text so the analysis is accurate.
+- Performs sentiment and emotion analysis.
+- Creates visual charts and graphs for better understanding.
+- Generates reports that can help with research, business decisions, or just keeping track of public opinion.
 
 ---
 
-## 🧩 Tech Stack
+## Tech Behind It
 
-| Layer | Technology |
-|-------|-------------|
-| **Language** | Python 3.9+ |
-| **Framework** | Streamlit |
-| **AI Models** | RoBERTa, DistilRoBERTa |
-| **Libraries** | Transformers, NLTK, Plotly, Pandas, NumPy |
-| **APIs** | X (Twitter) API v2, Reddit API |
-| **Deployment** | Docker |
-| **Testing** | unittest |
+- **Backend & Data:** Python, REST APIs, Twitter/X API v2, Reddit API, SQLAlchemy, PostgreSQL/SQLite
+- **AI & NLP:** HuggingFace Transformers (RoBERTa), NLTK VADER, pandas, NumPy
+- **Visualizations:** Plotly, Matplotlib, Seaborn
 
 ---
-
-## 🏗️ Project Structure
-```python
-Social_Analyzer/
-│
-├── app/
-│   ├── main.py               # Streamlit entry point
-│   ├── models/               # Sentiment + emotion model wrappers
-│   ├── services/             # Processing logic & API clients
-│   ├── visualization/        # Plotly chart builders
-│   └── utils/                # Helpers (cleaning, formatting, config)
-│
-├── requirements.txt          # Dependencies
-├── Dockerfile                # Container configuration
-├── .env.example              # Example API credentials
-└── README.md                 # This file
-```
-
----
-
-## 🔍 Workflow
-### 1️⃣ Paste a Social Media URL
-```python
-https://twitter.com/elonmusk/status/12345
-```
-### 2️⃣ Processing Pipeline
-```python
-USER INPUT
-   ↓
-URL RECOGNITION
-   ↓
-CONTENT EXTRACTION
-   ↓
-TEXT CLEANING
-   ↓
-AI ANALYSIS (Sentiment + Emotion)
-   ↓
-VISUALIZATION
-   ↓
-FINAL INSIGHTS
-```
-
----
-
-## 🐳 Docker Setup
-### 1️⃣ Build the image
-```python
-docker build -t social_analyzer
-```
-### 2️⃣ Run the container
-```python
-docker run -p 8501:8501 social_analyzer
-```
