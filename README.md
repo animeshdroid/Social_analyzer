@@ -28,6 +28,6 @@ The application is structured for clarity and maintainability:
 * **`visualizer.py`**: Handles all chart generation.
 * **`main.py`**: The application's entry point and web interface (likely using Streamlit, judging by the `st.plotly_chart` usage).
 
-### Deployment and Performance
+### Deployment 
 * **Dockerized:** Uses a `python:3.9-slim` base image for a consistent environment. The build process includes setting up a model cache directory and creating a non-root user for security.
 
