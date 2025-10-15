@@ -1,23 +1,33 @@
 # Social Analyzer
 
-Social Analyzer is a tool that helps you understand what people are saying on social media. It can analyze posts from X (formerly Twitter) and Reddit, figure out the overall sentiment (positive, negative, or neutral), and detect emotions like joy, anger, sadness, fear, or surprise. The best part? It turns all that data into easy-to-read charts and reports so you can quickly see trends and insights.
+Social Analyzer is a complete social media analysis tool that uses **Artificial Intelligence (AI) and Transformer models** to automatically extract feelings, emotions, and patterns from social media content at scale.
 
----
+## Core Features
 
-## What It Does
+### 1. Data Processing Pipeline
+* **Platform Identification:** Determines if the input URL is from **Twitter** or **Reddit**.
+* **Content Extraction:** Extracts the main text and relevant metadata (likes, retweets, replies, score, comments, etc.).
+* **Text Cleaning:** Prepares raw text for AI models by removing URLs, handling repeated characters, and extracting entities like hashtags and mentions.
 
-- Pulls posts and comments from X and Reddit.
-- Cleans and processes the text so the analysis is accurate.
-- Performs sentiment and emotion analysis.
-- Creates visual charts and graphs for better understanding.
-- Generates reports that can help with research, business decisions, or just keeping track of public opinion.
+### 2. AI-Powered Analysis
+* **Sentiment Analysis:** Categorizes the text's overall tone as **POSITIVE**, **NEGATIVE**, or **NEUTRAL** using the `cardiffnlp/twitter-roberta-base-sentiment-latest` model (a **ROBERTa Transformer Model**).
+* **Emotion Analysis:** Detects the specific feeling from a list of seven emotions: **Joy, Sadness, Anger, Fear, Surprise, Disgust,** and **Neutral**, using the `j-hartmann/emotion-english-distilroberta-base` model.
+* **Comment Analysis:** Processes all comments associated with a post, grouping them by theme using **K-Means clustering** and calculating a **Controversy Score** based on the sentiment distribution.
 
----
+### 3. Visualization and Reporting
+* **Visual Data:** Uses **Plotly.js** to create charts for instant insights.
+* **Key Visualizations:** Includes a **Sentiment Confidence Gauge**, an **Emotion Radar Chart**, and a **Comment Sentiment Timeline**.
+* **Emoji Mapping:** Assigns visual sentiment representation using emojis (e.g., :smiling_face:, :disappointed_face:).
 
-## Tech Behind It
+## Technical Architecture
 
-- **Backend & Data:** Python, REST APIs, Twitter/X API v2, Reddit API, SQLAlchemy, PostgreSQL/SQLite
-- **AI & NLP:** HuggingFace Transformers (RoBERTa), NLTK VADER, pandas, NumPy
-- **Visualizations:** Plotly, Matplotlib, Seaborn
+The application is structured for clarity and maintainability:
 
----
+* **`models/`**: AI model wrappers (`SentimentAnalyzer`, `EmotionDetector`).
+* **`services/`**: Business logic (`DataProcessor` orchestrating the pipeline).
+* **`visualizer.py`**: Handles all chart generation.
+* **`main.py`**: The application's entry point and web interface (likely using Streamlit, judging by the `st.plotly_chart` usage).
+
+### Deployment and Performance
+* **Dockerized:** Uses a `python:3.9-slim` base image for a consistent environment. The build process includes setting up a model cache directory and creating a non-root user for security.
+
