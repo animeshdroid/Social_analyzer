@@ -146,7 +146,7 @@ Final Report
 
 ```bash
 git clone https://github.com/yourusername/social-analyzer-pro
-cd social-analyzer-pro
+cd social-analyzer
 pip install -r requirements.txt
 streamlit run app/main.py
 ```
@@ -154,7 +154,7 @@ streamlit run app/main.py
 **With Docker:**
 
 ```bash
-docker build -t social-analyzer-pro .
+docker build -t social-analyzer .
 docker run -p 8501:8501 social-analyzer-pro
 ```
 
