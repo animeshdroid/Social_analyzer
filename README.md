@@ -155,7 +155,7 @@ streamlit run app/main.py
 
 ```bash
 docker build -t social-analyzer .
-docker run -p 8501:8501 social-analyzer-pro
+docker run -p 8501:8501 social-analyzer
 ```
 
 App runs at `http://localhost:8501`
