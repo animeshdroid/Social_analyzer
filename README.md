@@ -32,7 +32,6 @@ app/
 ├── utils/
 │   ├── constants.py            # Emoji maps, color palette, config
 │   ├── helpers.py              # Text cleaning, entity extraction
-│   └── config.py               # Model names, env settings
 └── main.py                     # Streamlit UI
 ```
 
