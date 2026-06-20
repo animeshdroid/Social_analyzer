@@ -3,7 +3,15 @@
 A full-stack AI pipeline that analyzes sentiment and emotion from Twitter/Reddit content using transformer models — built with production engineering principles.
 
 -----
+## Project Status
 
+This project is no longer actively maintained.
+
+Some functionality may no longer work due to changes in X/Twitter, Reddit, and other third-party APIs since the project was created.
+
+The repository remains public for educational and portfolio purposes.
+
+-----
 ## What It Does
 
 Paste a Twitter or Reddit URL. The system fetches the content, runs it through two transformer models, and returns:
