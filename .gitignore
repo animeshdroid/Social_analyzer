@@ -1,13 +1,35 @@
+# Environment
 .env
+.env.*
+
+# Python
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 .Python
+
+# Virtual environments
 .venv/
 venv/
+
+# Testing
 .pytest_cache/
-.DS_Store
+
+# Logs
 *.log
+
+# macOS
+.DS_Store
+
+# Local model/cache files
 models_cache/
 
+# IDE
+.vscode/
+.idea/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
